@@ -1,0 +1,28 @@
+{
+    "name" : "Forward Screen Id",
+    "author": "forest",
+    "version" : "1",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "Capture full-screen or specific application's screen on any HTTP domain!",
+    "homepage_url": "http://www.cs.ubbcluj.ro",
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "all_frames": true,
+       "run_at": "document_end",
+       "matches": ["https://localhost/*", "http://localhost/*"]
+    }],
+    "icons" : {
+        "48" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

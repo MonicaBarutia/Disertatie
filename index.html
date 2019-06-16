@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WebRTC Screen Capturing</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+    </style>
+    <script src="Screen-Capturing.js"></script>
+    <!-- scripts used for webrtc -->
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="webrtc.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+    <script src="screenSharing3.js"></script>
+</head>
+
+<body>
+<ul id="menu">
+    <li id="text" title="Text"><i class="material-icons">title</i></li>
+    <li id="arrow" title ="Arrow"><i class="material-icons">call_made</i></li>
+    <li id="rectangle" title="Rectangle"><i class="material-icons">crop_landscape</i></li>
+    <li id="pen" title="Pen"><i class="fa fa-pencil"></i></li>
+    <li id="color" title="Color"><input type="color" value="black" onchange="updateColor(this)" style="width:100%;"/></li>
+    <li id="erase" title="Eraser"><i class="fa fa-eraser"></i></li>
+    <li id="delete" title="Delete"><i class="material-icons">delete</i></li>
+</ul>
+<!--<canvas id="myCanvas"></canvas>-->
+<video id="localVideo" controls style="max-width: 40%;"></video>
+<video id="remoteVideo" autoplay style="width:40%;"></video><br/>
+<br/>
+<button id="startbtn" onclick="start(true)">Start streaming</button>
+<!--<script>-->
+<!--window.onload = function() {-->
+<!--pageReady(true);-->
+<!--};-->
+<!--</script>-->
+</body>
+</html>
